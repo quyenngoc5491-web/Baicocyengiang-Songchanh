@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Di tích Bãi cọc Yên Giang - Cửa sông Chanh</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        :root {
+            --primary-color: #8B0000; /* Đỏ đô - màu đền đài truyền thống */
+            --secondary-color: #D2B48C; /* Màu vàng cát/gỗ cổ kính */
+            --dark-color: #2b2b2b;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            background-color: var(--primary-color) !important;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            font-weight: 600;
+        }
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://unsplash.com') no-repeat center center/cover;
+            color: white;
+            padding: 150px 0 100px 0;
+            text-align: center;
+        }
+        .section-title {
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 150px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+        }
+        .bg-light-custom {
+            background-color: #f9f6f0;
+        }
+        .card-khai-quat {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .card-khai-quat:hover {
+            transform: translateY(-5px);
+        }
+        .icon-box {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: var(--dark-color);
+            color: #ccc;
+            padding: 40px 0;
+        }
+        .map-container, .video-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* Tỷ lệ 16:9 */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .map-container iframe, .video-container iframe, .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. THANH ĐIỀU HƯỚNG (NAVBAR) -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-gopuram me-2"></i>BÃI CỌC YÊN GIANG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-collapse navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#gioi-thieu">Giới Thiệu & Vị Trí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#khao-co">Phát Hiện Khảo Cổ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gia-tri">Giá Trị Di Tích</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bao-ton">Bảo Tồn & Phát Huy</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BANNER CHÍNH (HERO SECTION) -->
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">DI TÍCH LỊCH SỬ BÃI CỌC YÊN GIANG</h1>
+            <p class="lead">Chứng tích hào hùng của Trận chiến Bạch Đằng năm 1288 tại cửa sông Chanh</p>
+            <a href="#gioi-thieu" class="btn btn-outline-light btn-lg mt-3">Khám Phá Ngay</a>
+        </div>
+    </header>
+
+    <!-- 2. MỤC: GIỚI THIỆU CHUNG VÀ VỊ TRÍ -->
+    <section id="gioi-thieu" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Giới Thiệu Chung & Vị Trí</h2>
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <p class="lead fw-bold text-success"><i class="fa-solid fa-location-dot me-2"></i>Vị trí chiến lược tại cửa sông Chanh</p>
+                    <p><strong>Bãi cọc Yên Giang</strong> nằm tại phường Yên Giang, thị xã Quảng Yên, tỉnh Quảng Ninh, tọa lạc ngay bên cạnh khu vực <strong>Đền Trần Hưng Đạo</strong> cổ kính. Đây là một bộ phận cốt lõi cấu thành nên quần thể di tích quốc gia đặc biệt Chiến thắng Bạch Đằng năm 1288.</p>
+                    <p>Nằm ngay tại cửa sông Chanh - một nhánh lưu thông quan trọng của hệ thống sông Bạch Đằng xưa, bãi cọc được lựa chọn làm điểm chặn đứng, cô lập và tiêu diệt hoàn toàn đoàn chiến thuyền của quân xâm lược Nguyên - Mông khi chúng tháo chạy ra biển.</p>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Bản đồ nhúng Google Maps định vị khu vực đền Trần / Sông Chanh -->
+                    <div class="map-container">
+                        <iframe src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <small class="text-muted d-block text-center mt-2">Bản đồ tương tác vị trí Đền Trần và Bãi cọc Yên Giang</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. MỤC: CÁC PHÁT HIỆN KHẢO CỔ QUAN TRỌNG -->
+    <section id="khao-co" class="py-5 bg-light-custom">
+        <div class="container">
+            <h2 class="text-center section-title">Các Phát Hiện Khảo Cổ Quan Trọng</h2>
+            <p class="text-center text-muted mb-5">Hành trình phát lộ trận địa chông ngầm vĩ đại của lịch sử dân tộc.</p>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card card-khai-quat h-100 p-4">
+                        <div class="icon-box"><i class="fa-solid fa-compass-drafting"></i></div>
+                        <h4>Các Mốc Khai Quật</h4>
+                        <p>Di tích được phát hiện lần đầu vào năm 1958. Trải qua các đợt nghiên cứu, khai quật lớn vào các năm 1969, 1976, 1984 và 1988, các nhà khảo cổ đã làm phát lộ toàn bộ quy mô cốt lõi của trận địa.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-khai-quat h-100 p-4">
+                        <div class="icon-box"><i class="fa-solid fa-tree"></i></div>
+                        <h4>Thông Số Cọc Gỗ</h4>
+                        <p>Các cọc khảo cổ phát hiện chủ yếu được làm bằng gỗ lim, táu, sến. Chiều dài trung bình từ <strong>2,6m đến 2,8m</strong>, đường kính dao động rộng từ <strong>20cm đến 30cm</strong>. Phần gốc cọc được đẽo nhọn sắc bén để cắm sâu xuống đáy sông.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-khai-quat h-100 p-4">
+                        <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                        <h4>Thế Trận "Răng Lược"</h4>
+                        <p>Các cọc được đóng theo hình chữ "răng lược", nghiêng một góc 45 độ theo chiều ngược dòng nước. Mật độ đóng cọc dày đặc ở sát bờ sông Chanh và thưa dần ra phía lòng sông sâu nhằm tối ưu hóa bẫy chiến thuật.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video và Hình ảnh thực tế ao cọc -->
+            <div class="row mt-5 g-4">
+                <div class="col-lg-6">
+                    <div class="video-container">
+                        <!-- Thay thế link Youtube bằng video tư liệu thực tế của bạn -->
+                        <iframe src="https://youtube.com" title="Video tư liệu bãi cọc Yên Giang" allowfullscreen></iframe>
+                    </div>
+                    <small class="text-muted d-block text-center mt-2">Video: Thước phim tư liệu mô phỏng Trận chiến Bạch Đằng 1288</small>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://unsplash.com" alt="Khu bảo tồn ao cọc Yên Giang" class="img-fluid rounded shadow w-100" style="height: 100%; object-fit: cover;">
+                    <small class="text-muted d-block text-center mt-2">Hình ảnh: Khu vực hố khai quật bảo tồn nguyên trạng ao cọc lộ thiên tại Yên Giang</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <!-- 4. MỤC: GIÁ TRỊ CỦA DI TÍCH -->
+    <section id="gia-tri" class="py-5" style="background: linear-gradient(135deg, #fff 0%, #fbf9f6 100%);">
+        <div class="container">
+            <h2 class="text-center section-title">Giá Trị Của Di Tích</h2>
+            <p class="text-center text-muted mb-5">Tầm vóc lịch sử và những bài học quân sự trường tồn cùng thời gian.</p>
+            
+            <div class="row align-items-center g-5">
+                <!-- Cột trái: Trích dẫn & Hình ảnh minh họa nghệ thuật -->
+                <div class="col-lg-5">
+                    <div class="p-4 bg-white rounded shadow-sm border-start border-4 border-danger mb-4">
+                        <i class="fa-solid fa-quote-left display-6 text-danger opacity-50 mb-3 d-block"></i>
+                        <h5 class="fst-italic lh-base text-dark fw-normal">
+                            "Trận Bạch Đằng năm 1288 là một chiến công lừng lẫy, kết tinh đỉnh cao của trí tuệ và nghệ thuật quân sự độc đáo độc nhất vô nhị của ông cha ta."
+                        </h5>
+                        <hr class="w-25 my-3" style="color: var(--primary-color); height: 2px;">
+                        <p class="mb-0 fw-bold text-end text-uppercase small text-muted">- Hội đồng Khoa học Lịch sử</p>
+                    </div>
+                    
+                    <div class="position-relative overflow-hidden rounded shadow-sm">
+                        <img src="https://unsplash.com" alt="Biểu tượng nghệ thuật trận chiến" class="img-fluid w-100" style="max-height: 250px; object-fit: cover;">
+                        <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 p-2 text-center">
+                            <span class="text-white small fw-bold">Hào khí Đông A - Tinh thần bất khuất nhà Trần</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột phải: Chi tiết 3 giá trị cốt lõi -->
+                <div class="col-lg-7">
+                    <div class="mb-4">
+                        <span class="badge bg-danger p-2 text-uppercase mb-2">Đỉnh Cao Nghệ Thuật Quân Sự Kẻ Thù Khiếp Sợ</span>
+                        <h3 class="fw-bold" style="color: var(--primary-color);">Tầm Vóc Chiến Thắng Bạch Đằng 1288</h3>
+                    </div>
+
+                    <!-- Khối Giá trị 1 -->
+                    <div class="d-flex align-items-start p-3 bg-white rounded shadow-sm mb-3 border-bottom border-2 border-light">
+                        <div class="bg-danger bg-opacity-10 text-danger p-3 rounded me-3">
+                            <i class="fa-solid fa-shield-halved fa-2x"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1 text-dark">Chứng tích hiện vật duy nhất</h5>
+                            <p class="text-muted mb-0">Bãi cọc là bằng chứng vật chất trực tiếp, đập tan huyền thoại bách chiến bách thắng của đế quốc Nguyên - Mông vĩ đại thời bấy giờ.</p>
+                        </div>
+                    </div>
+
+                    <!-- Khối Giá trị 2 -->
+                    <div class="d-flex align-items-start p-3 bg-white rounded shadow-sm mb-3 border-bottom border-2 border-light">
+                        <div class="bg-primary bg-opacity-10 text-primary p-3 rounded me-3">
+                            <i class="fa-solid fa-water fa-2x"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1 text-dark">Nghệ thuật thủy chiến thiên tài</h5>
+                            <p class="text-muted mb-0">Khẳng định tài mưu lược kiệt xuất của Trần Hưng Đạo khi vận dụng xuất sắc quy luật tự nhiên, tính toán chính xác chu kỳ thủy triều lên xuống để đặt bẫy cọc ngầm.</p>
+                        </div>
+                    </div>
+
+                    <!-- Khối Giá trị 3 -->
+                    <div class="d-flex align-items-start p-3 bg-white rounded shadow-sm mb-3 border-bottom border-2 border-light">
+                        <div class="bg-warning bg-opacity-10 text-warning p-3 rounded me-3">
+                            <i class="fa-solid fa-landmark fa-2x"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1 text-dark">Giá trị giáo dục sâu sắc</h5>
+                            <p class="text-muted mb-0">Là biểu tượng trường tồn cho tinh thần tự lực tự cường, đoàn kết toàn dân của triều đại nhà Trần và dân tộc Việt Nam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. MỤC: BIỆN PHÁP BẢO TỒN VÀ PHÁT HUY -->
+    <section id="bao-ton" class="py-5 bg-light-custom">
+        <div class="container">
+            <h2 class="text-center section-title">Biện Pháp Bảo Tồn & Phát Huy</h2>
+            <p class="text-center text-muted mb-5">Sự kết hợp giữa bảo vệ nguyên trạng di sản vật thể và ứng dụng công nghệ tương lai.</p>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Giải pháp 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm transition-card" style="border-radius: 12px; overflow: hidden;">
+                        <div class="position-relative">
+                            <img src="https://unsplash.com" class="card-img-top" alt="Bảo tồn vật thể" style="height: 180px; object-fit: cover;">
+                            <span class="position-absolute top-0 start-0 m-3 badge bg-dark"><i class="fa-solid fa-wrench me-1"></i> Giải pháp hạ tầng</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold card-title text-primary"><i class="fa-solid fa-temperature-arrow-down me-2"></i>Bảo Tồn Vật Thể</h5>
+                            <p class="card-text text-muted small lh-base">
+                                Xây dựng hệ thống nhà mái che bao phủ toàn bộ vùng hố cọc lộ thiên. Thiết lập hệ thống phun nước tự động giữ ẩm liên tục, ngăn chặn các tác động tiêu cực của thời tiết làm mủn mục thớ gỗ cổ.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giải pháp 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm transition-card" style="border-radius: 12px; overflow: hidden;">
+                        <div class="position-relative">
+                            <img src="https://unsplash.com" class="card-img-top" alt="Số hóa di sản" style="height: 180px; object-fit: cover;">
+                            <span class="position-absolute top-0 start-0 m-3 badge bg-success"><i class="fa-solid fa-mobile-screen me-1"></i> Công nghệ số</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold card-title text-success"><i class="fa-solid fa-qrcode me-2"></i>Số Hóa Du Lịch Số</h5>
+                            <p class="card-text text-muted small lh-base">
+                                Tích hợp mã QR tại khuôn viên Đền Trần. Du khách chỉ cần quét mã bằng điện thoại để xem ngay hiện vật số hóa 3D, lắng nghe thuyết minh tự động đa ngôn ngữ về lịch sử bãi cọc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giải pháp 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm transition-card" style="border-radius: 12px; overflow: hidden;">
+                        <div class="position-relative">
+                            <img src="https://unsplash.com" class="card-img-top" alt="Thực tế ảo AR" style="height: 180px; object-fit: cover;">
+                            <span class="position-absolute top-0 start-0 m-3 badge bg-info text-dark"><i class="fa-solid fa-vr-cardboard me-1"></i> Tương tác cao</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold card-title text-info text-dark"><i class="fa-solid fa-wand-magic-sparkles me-2"></i>Trải Nghiệm Thực Tế Ảo</h5>
+                            <p class="card-text text-muted small lh-base">
+                                Phát triển ứng dụng thực tế ảo tăng cường (AR), giúp tái hiện sống động mô hình 3D trận thủy chiến oanh liệt năm xưa ngay trên mặt nước sông Chanh trước tầm mắt của du khách.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
